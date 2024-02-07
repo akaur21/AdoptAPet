@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ReactDOM from "react-dom/client";
 import SearchParams from "./SearchParams";
-import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link, BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AdoptedPetContext from "./AdoptedPetContext";
 import Details from "./Details";
@@ -23,7 +23,7 @@ const App = () => {
         background: "url(http://pets-images.dev-apis.com/pets/wallpaperA.jpg)",
       }}
     >
-      <BrowserRouter>
+      <HashRouter>
         <QueryClientProvider client={queryClient}>
           <AdoptedPetContext.Provider value={adoptedPet}>
             <header
@@ -39,7 +39,7 @@ const App = () => {
             </Routes>
           </AdoptedPetContext.Provider>
         </QueryClientProvider>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
