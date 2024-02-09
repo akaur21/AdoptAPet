@@ -2,8 +2,8 @@
 
 This is Pet application , where you can search pat by diffrent location and category.
 
-## LIVE APP URL
-[http://akaur21.github.io/AdoptAPet] (http://akaur21.github.io/AdoptAPet)
+## DEMO APP URL
+[Click Here](http://akaur21.github.io/AdoptAPet)
 
 ## Available Scripts
 
@@ -31,6 +31,6 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 
-## `npm run deploy`
+### `npm run deploy`
 
 Build the app and deploys it to Github Pages.
