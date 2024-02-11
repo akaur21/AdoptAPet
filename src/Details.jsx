@@ -20,7 +20,7 @@ const Details = () => {
       </div>
     );
   }
-  const pet = results.data[0];
+  const pet = results.data.pets[0];
 
   return (
     <div className="details">
