@@ -13,7 +13,7 @@ async function fetchSearch({ queryKey }) {
   // console.log(params.toString());
   const res = await fetch(
    // `https://65bd02f3b51f9b29e932bdb1.mockapi.io/pet?${params.toString()}`
-   `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
+   `https://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
   );
   if (!res.ok) {
     throw new Error(`pet search not okay ${animal}, ${city}, ${breed}`);
