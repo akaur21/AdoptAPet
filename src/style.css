@@ -368,3 +368,77 @@ form .pet {
 .mini .loader {
   font-size: 34px;
 }
+
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-wrapper form fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0px;
+}
+.signup-wrapper form fieldset input {
+  border: 1px solid #333
+}
+
+.signup-wrapper form button {
+  width: 100%;
+  background: #2cd202;
+  padding: 5px 10px;
+  border: 1px solid #135702;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+
+
+.addpet-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.addpet-wrapper form fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0px;
+}
+.addpet-wrapper form fieldset input,
+.addpet-wrapper form fieldset select {
+  border: 1px solid #333
+}
+
+.addpet-wrapper form button {
+  width: 100%;
+  background: #2cd202;
+  padding: 5px 10px;
+  border: 1px solid #135702;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.btn-add-pet {
+  position: absolute;
+  top: 53px;
+  right: 79px;
+  
+}
+
+.pet-wrapper {
+  position: relative;
+}
+
+.edit-button {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: white;
+}
+
+.delete-button {
+  position: absolute;
+  right: 10px;
+  top: 45px;
+  color: white;
+}

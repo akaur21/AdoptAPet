@@ -1,5 +1,6 @@
 import Pet from "./Pet";
-const Results = ({ pets }) => {
+const Results = ({ pets, handleDelete }) => {
+  
   return (
     <div className="search">
       {!pets.length ? (
@@ -10,10 +11,10 @@ const Results = ({ pets }) => {
             animal={pet.animal}
             id={pet.id}
             name={pet.name}
-            breed={pet.breed}
-            images={pet.images}
-            location={`${pet.city}, ${pet.state}`}
+            images={pet.photoUrls}
+            location={pet.tags.map(i => i.name).join(", ")}
             key={pet.id}
+            deleteCalback={handleDelete}
           />
         ))
       )}
