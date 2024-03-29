@@ -20,15 +20,16 @@ const Details = () => {
       </div>
     );
   }
-  const pet = results.data.pets[0];
+  console.log("results : ", results.data);
+  const pet = results.data;
 
   return (
     <div className="details">
-      <Carousel images={pet.images} />
+      <Carousel images={pet.photoUrls} />
       <div>
         <h1>{pet.name}</h1>
         <h2>
-          {pet.animal} - {pet.breed} - {pet.city},{pet.state}
+          {pet.tags.map(i => i.name).join(", ")}
           <button onClick={() => setShowModal(true)}>Adopt {pet.name}</button>
           <p>{pet.description}</p>
           {showModal ? (

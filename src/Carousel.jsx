@@ -5,7 +5,7 @@ class Carousel extends Component {
     active: 0,
   };
   static defaultProps = {
-    images: ["https://pets-images.dev-apis.com/pets/none.jpg"],
+    images: ["http://pets-images.dev-apis.com/pets/none.jpg"],
   };
   handleIndexClick = (e) => {
     this.setState({
