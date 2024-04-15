@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AdoptAPet/static/css/main.195a9c66.css",
+    "main.js": "/AdoptAPet/static/js/main.1a5e84ef.js",
+    "static/js/453.ca8ff3a8.chunk.js": "/AdoptAPet/static/js/453.ca8ff3a8.chunk.js",
+    "index.html": "/AdoptAPet/index.html",
+    "main.195a9c66.css.map": "/AdoptAPet/static/css/main.195a9c66.css.map",
+    "main.1a5e84ef.js.map": "/AdoptAPet/static/js/main.1a5e84ef.js.map",
+    "453.ca8ff3a8.chunk.js.map": "/AdoptAPet/static/js/453.ca8ff3a8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.195a9c66.css",
+    "static/js/main.1a5e84ef.js"
+  ]
+}
