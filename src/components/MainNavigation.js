@@ -6,6 +6,7 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import { Add } from "@mui/icons-material";
+import Logo from "../logo.png";
 
 const MainNavigation = () => {
   const location = useLocation();
@@ -70,7 +71,7 @@ const MainNavigation = () => {
             <Grid item sm={4}></Grid>
             <Grid item xs={6} sm={4}>
               <Link to="/">
-                <img src="/images/logo.png" />{" "}
+                <img src={Logo} />{" "}
               </Link>
             </Grid>
             <Grid
