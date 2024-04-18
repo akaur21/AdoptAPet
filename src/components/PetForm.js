@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import CustomButton from "./CustomButton";
 import CustomInput from "./CustomInput";
@@ -12,6 +12,7 @@ import { savePet } from "../controllers/savePet";
 import { useNavigate, useParams } from "react-router-dom";
 import { getPet } from "../controllers/getPet";
 import { editPet } from "../controllers/editPet";
+import { GlobalContext } from "../pages/globalContext";
 
 const states = [];
 for (const state in StateCity) {
@@ -24,6 +25,7 @@ const animalMap = {
 };
 
 const PetForm = ({ id, pet }) => {
+  const { setShow, setMsg, setVariant } = useContext(GlobalContext);
   const [enteredNameInput, setEnteredNameInput] = useState(pet ? pet.name : "");
   const [enteredCategory, setEnteredCategory] = useState(
     pet ? pet.category.name : ""
@@ -123,10 +125,15 @@ const PetForm = ({ id, pet }) => {
     console.log(pet);
 
     if (id) {
-      const data = await editPet(pet);
-      console.log(data);
+      await editPet(pet);
+      setVariant("success")
+      setMsg("Pet Updated Successfully...")
+      setShow(true);
     } else {
       await savePet(pet);
+      setVariant("success")
+      setMsg("Pet Added Successfully...")
+      setShow(true);
     }
 
     navigate("/");
