@@ -1,12 +1,14 @@
 import { Grid } from "@mui/material";
 import SearchByLocation from "./SearchByLocation";
 import Results from "./Results";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getPets } from "../controllers/getPets";
 import View from "./View";
 import { createSearchParams, useLocation, useNavigate } from "react-router-dom";
+import { GlobalContext } from "../pages/globalContext";
 
 const Home = () => {
+  const { setShow, setMsg, setVariant } = useContext(GlobalContext);
   const [pets, setPets] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [view, setView] = useState({
@@ -89,7 +91,12 @@ const Home = () => {
               pets={pets}
               isLoading={isLoading}
               view={view}
-              onDelete={() => setRefetch(true)}
+              onDelete={() => {
+                setRefetch(true);
+                setVariant("error")
+                setMsg("Pet Deleted Successfully...")
+                setShow(true);
+              }}
             /> : <div>
               No records found, Try adding new records...
               </div>}
