@@ -231,10 +231,10 @@ const PetForm = ({ id, pet }) => {
       </Box>
       <Box
         width="400px"
-        height="100vh"
+        height="calc(100% - 69px)"
         position="fixed"
         left={0}
-        top={0}
+        bottom={0}
         className="image-container"
         display={{ xs: "none", sm: "block" }}
       >

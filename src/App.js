@@ -5,6 +5,7 @@ import AddPetPage from "./pages/AddPetPage";
 import EditPetPage from "./pages/editPetPage";
 import PetDetailPage from "./pages/PetDetailPage";
 import ErrorPage from "./pages/Error";
+import AboutUsPage from "./pages/AboutUsPage";
 
 const router = createHashRouter([
   {
@@ -27,6 +28,9 @@ const router = createHashRouter([
       {
         path: "edit-pet/:id",
         element: <EditPetPage />,
+      },{
+        path: "about-us",
+        element: <AboutUsPage />,
       },
     ],
   },

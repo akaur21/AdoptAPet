@@ -5,6 +5,7 @@ import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import { GlobalContext } from "./globalContext";
 import { useState } from "react";
+import NewNavigation from "../components/newNavigation";
 
 const RootLayoutPage = ({ children }) => {
   const [msg, setMsg] = useState("");
@@ -22,7 +23,7 @@ const RootLayoutPage = ({ children }) => {
   return (
     <>
       <GlobalContext.Provider value={{ setMsg, setShow, setVariant }}>
-        <MainNavigation />
+        <NewNavigation />
         <Box
           className="site-container"
           sx={{

@@ -36,31 +36,7 @@ const MainNavigation = () => {
   }
 
   return (
-    // <header className="site-container" style={{ paddingTop: 20 }}>
-    //   <nav>
-    //     <Grid container>
-    //       <Grid item xs={location.pathname === "/add-pet" ? 5 : 4}>
-    //         <Box></Box>
-    //       </Grid>
-    //       <Grid item xs={4}>
-    //         <Link to="/">
-    //           <img src="/images/logo.png" />
-    //         </Link>
-    //       </Grid>
-    //       <Grid
-    //         item
-    //         xs={3}
-    //         display="flex"
-    //         justifyContent="flex-end"
-    //         alignItems="center"
-    //         gap="10px"
-    //       >
-    //         {homeButton}
-    //         {addPetButton}
-    //       </Grid>
-    //     </Grid>
-    //   </nav>
-    // </header>
+    
     <>
       <AppBar
         position="sticky"
@@ -85,60 +61,7 @@ const MainNavigation = () => {
               {homeButton}
             </Grid>
           </Grid>
-          {/* <Box width="33.33%"></Box>
-
-            <Box display="flex" justifyContent="center" width="33%.33">
-              <Link to="/">
-                <img src="/images/logo.png" />{" "}
-              </Link>
-            </Box> */}
-          {/* <Box sx={{ flexGrow: 0.5, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              sx={{ color: "#ad343e" }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
-          {/* <Box
-              sx={{
-                flexGrow: 1,
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-              width="33.33%"
-            >
-              {homeButton}
-            </Box>
-          </Toolbar> */}
+          
         </Container>
         {location.pathname !== "/add-pet" && (
           <Box>
