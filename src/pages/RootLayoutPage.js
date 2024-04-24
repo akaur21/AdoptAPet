@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import MainNavigation from "../components/MainNavigation";
 import { Box } from "@mui/material";
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';

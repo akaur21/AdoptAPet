@@ -38,7 +38,10 @@ const theme = createTheme({
     
   });
 
-const pages = ['About Us'];
+const pages = [
+    { label: 'About Us', to: '/about-us' },
+    { label: 'Contact Us', to: '/contact-us' }, 
+];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NewNavigation() {
@@ -113,7 +116,7 @@ function NewNavigation() {
                 >
                 {pages.map((page) => (
                     <MenuItem key={page} onClick={handleCloseNavMenu} color={"black"}>
-                        <Typography sx={{ color: "black"}} textAlign="center" color={"primary.dark"}>{page}</Typography>
+                        <Typography sx={{ color: "black"}} textAlign="center" color={"primary.dark"}>{page.label}</Typography>
                     </MenuItem>
                 ))}
                 </Menu>
@@ -142,11 +145,11 @@ function NewNavigation() {
                     key={page}
                     onClick={() => {
                         handleCloseNavMenu();
-                        navigate('/about-us')
+                        navigate(page.to)
                     }}
                     sx={{ my: 2,display: 'block', color: "black" }}
                 >
-                    {page}
+                    {page.label}
                 </Button>
                 ))}
             </Box>

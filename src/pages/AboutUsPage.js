@@ -1,12 +1,12 @@
-import MainNavigation from "../components/MainNavigation";
+
+import { Paper } from "@mui/material";
 import PageContent from "../components/PageContent";
-import NewNavigation from "../components/newNavigation";
 
 function AboutUsPage() {
   let title = "About Us";
 
   return (
-    <>
+    <Paper sx={{ p: 3}} elevation={6}>
       <PageContent title={title}>
         <p>Welcome to our pet adopting web application, your one-stop destination for finding the perfect furry companion!
             Our platform connects compassionate individuals with lovable pets in need of forever home.
@@ -16,7 +16,7 @@ function AboutUsPage() {
             directly from your device. Join us in making a diffrence in the lives of pets across the nation by welcoming a new member into your family today!
         </p>
       </PageContent>
-    </>
+    </Paper>
   );
 }
 
