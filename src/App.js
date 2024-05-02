@@ -8,6 +8,22 @@ import ErrorPage from "./pages/Error";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactUsPage from "./pages/ContactUsPage";
 
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { grey, pink } from '@mui/material/colors';
+
+const theme = createTheme({
+  palette: {
+    type: 'light',
+    primary: {
+      main: '#f48fb1',
+    },
+    secondary: {
+      main: '#f50057',
+    },
+  },
+  
+});
+
 const router = createHashRouter([
   {
     path: "/",
@@ -42,7 +58,8 @@ const router = createHashRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+
+  return <ThemeProvider theme={theme}><RouterProvider router={router} /></ThemeProvider>;
 }
 
 export default App;

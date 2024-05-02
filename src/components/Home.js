@@ -83,9 +83,9 @@ const Home = () => {
       </Grid>
       <Grid item xs={12} md={8}>
         <Grid container spacing={2}>
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <View onChange={handleView} value={viewValue} />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12}>
             {pets.length > 0 ? <Results
               pets={pets}
