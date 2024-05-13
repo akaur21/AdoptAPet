@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import ListView from "./ListView";
 import TableView from "./TableView";
 import TileView from "./TileView";
+import GridView from './GridView';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -61,7 +62,8 @@ export default function Pets({ pets, view, onDelete }) {
         <TileView pets={pets} onDelete={onDelete} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <TableView pets={pets} onDelete={onDelete} />
+        {/* <TableView pets={pets} onDelete={onDelete} /> */}
+        <GridView pets={pets} onDelete={onDelete} />
       </CustomTabPanel>
     </Box>
   );
